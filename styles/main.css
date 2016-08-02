@@ -1,0 +1,975 @@
+@charset "UTF-8";
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html, body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2F343B;
+  margin: 0;
+  padding: 0;
+  background-color: #e3d9c8; }
+
+#page-wrapper {
+  max-width: 1290;
+  margin-left: auto;
+  margin-right: auto; }
+  #page-wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* * * Intro Styles * * */
+#inner {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%; }
+  #inner:last-child {
+    margin-right: 0; }
+
+#intro-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 100vh;
+  padding-top: 15%;
+  padding-bottom: 11%; }
+  #intro-wrapper:last-child {
+    margin-right: 0; }
+
+#intro {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 48.821174201%;
+  margin-left: 25.5894128995%;
+  text-align: center; }
+  #intro:last-child {
+    margin-right: 0; }
+
+#intro-wrapper h1 {
+  font-weight: 300; }
+
+#intro-wrapper h2 {
+  font-weight: 300; }
+
+#title {
+  height: 62px;
+  background-image: url("/images/title.svg");
+  background-position: center top;
+  background-repeat: no-repeat; }
+
+/* * * Hint Styles * * */
+.hint {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 31.7615656014%;
+  margin-left: 34.1192171993%;
+  position: absolute;
+  transform: translate -50%, -50%;
+  text-align: center;
+  color: #703030; }
+  .hint:last-child {
+    margin-right: 0; }
+
+.hint h3 {
+  margin: 8px 0 6px 0; }
+
+.hint p {
+  margin-top: 0px;
+  font-size: 0.9em; }
+
+#hint-1 {
+  top: 112vh;
+  left: 0%; }
+
+#hint-2 {
+  top: 215vh;
+  left: 0%; }
+
+/* * * Imports * * */
+#overlay {
+  z-index: 100;
+  background-color: black; }
+
+/* * * Imports * * */
+/**
+ * HEADER STYLES
+ *
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.message {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 100vh;
+  border-top: 5px solid #703030;
+  padding-top: 11%;
+  padding-bottom: 11%;
+  background-color: #e3d9c8; }
+  .message:last-child {
+    margin-right: 0; }
+
+#message-content {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 48.821174201%;
+  margin-left: 25.5894128995%;
+  text-align: center;
+  color: #aaaaaa; }
+  #message-content:last-child {
+    margin-right: 0; }
+
+#mask {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 20; }
+  #mask:last-child {
+    margin-right: 0; }
+
+#message-1-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-01.svg");
+  background-position: center top;
+  height: 420px; }
+  #message-1-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-1 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/masks-01.svg");
+  background-position: center top;
+  height: 420px; }
+  #mask-1:last-child {
+    margin-right: 0; }
+
+#message-2-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-02.svg");
+  background-position: center top;
+  height: 416px; }
+  #message-2-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-2 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 416px;
+  background-image: url("/images/masks-02.svg");
+  background-position: center top; }
+  #mask-2:last-child {
+    margin-right: 0; }
+
+#message-3-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-03.svg");
+  background-position: center top;
+  height: 416px; }
+  #message-3-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-3 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 416px;
+  background-image: url("/images/masks-03.svg");
+  background-position: center top; }
+  #mask-3:last-child {
+    margin-right: 0; }
+
+#message-4-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-04.svg");
+  background-position: center top;
+  height: 416px; }
+  #message-4-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-4 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 416px;
+  background-image: url("/images/masks-04.svg");
+  background-position: center top; }
+  #mask-4:last-child {
+    margin-right: 0; }
+
+#message-5-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-05.svg");
+  background-position: center top;
+  height: 416px; }
+  #message-5-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-5 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 416px;
+  background-image: url("/images/masks-05.svg");
+  background-position: center top; }
+  #mask-5:last-child {
+    margin-right: 0; }
+
+#message-6-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-06.svg");
+  background-position: center top;
+  height: 416px; }
+  #message-6-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-6 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 416px;
+  background-image: url("/images/masks-06.svg");
+  background-position: center top; }
+  #mask-6:last-child {
+    margin-right: 0; }
+
+#message-7-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background-image: url("/images/messages-07.svg");
+  background-position: center top;
+  height: 416px; }
+  #message-7-wrapper:last-child {
+    margin-right: 0; }
+
+#mask-7 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  height: 416px;
+  background-image: url("/images/masks-07.svg");
+  background-position: center top; }
+  #mask-7:last-child {
+    margin-right: 0; }
+
+/**
+ * MENU STYLES
+ *
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  padding: 80px; }
+
+.bt-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #e3d9c8;
+  background-color: transparent;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s; }
+
+.bt-menu.bt-menu-open {
+  height: 100%;
+  border-width: 0px 0px 50px 150px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: border-width 0.3s, background-color 0.3s;
+  transition: border-width 0.3s, background-color 0.3s; }
+
+.bt-overlay {
+  position: absolute;
+  width: 100%; }
+
+.bt-menu-open .bt-overlay {
+  height: 100%; }
+
+.bt-menu-trigger {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 100;
+  display: block;
+  width: 40px;
+  height: 50px;
+  cursor: pointer; }
+
+.bt-menu-trigger span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 8%;
+  background-color: #2F343B;
+  font-size: 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2F343B;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+.bt-menu-trigger span:before {
+  -webkit-transform: translateY(-250%);
+  transform: translateY(-250%); }
+
+.bt-menu-trigger span:after {
+  -webkit-transform: translateY(250%);
+  transform: translateY(250%); }
+
+.bt-menu-open .bt-menu-trigger span:before {
+  -webkit-transform: translateY(-300%);
+  transform: translateY(-300%); }
+
+.bt-menu-open .bt-menu-trigger span:after {
+  -webkit-transform: translateY(300%);
+  transform: translateY(300%); }
+
+.bt-menu ul {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.bt-menu ul:first-of-type {
+  top: 75px;
+  left: 0; }
+
+.bt-menu ul:nth-of-type(2) {
+  right: 0;
+  bottom: 0; }
+
+.bt-menu ul li,
+.bt-menu ul li a {
+  display: block; }
+
+.bt-menu ul:nth-of-type(2) li {
+  float: left;
+  font-size: 0px; }
+
+.bt-menu ul li {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+  transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s; }
+
+.bt-menu.bt-menu-open ul:first-of-type li,
+.bt-menu.bt-menu-open ul:nth-of-type(2) li {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
+  transition: transform 0.3s, opacity 0.3s; }
+
+/* First menu */
+.bt-menu ul:first-of-type li {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  -webkit-transform: translate3d(-100%, 50%, 0);
+  transform: translate3d(-100%, 50%, 0); }
+
+.bt-menu.bt-menu-open ul:first-of-type li {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* Second menu */
+.bt-menu ul:nth-of-type(2) li {
+  width: 60px;
+  height: 50px;
+  line-height: 50px;
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:first-child {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
+
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s; }
+
+.bt-menu.bt-menu-open ul:nth-of-type(2) li {
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.bt-menu ul li a {
+  display: block;
+  outline: none;
+  text-decoration: none; }
+
+.bt-menu ul:first-of-type li a {
+  padding: 0 20px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.2);
+  color: #2F343B;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+.bt-menu ul:first-of-type li:last-child a {
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.2); }
+
+.bt-menu ul:nth-of-type(2) li a {
+  color: transparent;
+  text-align: center;
+  font-size: 0px; }
+
+.bt-menu ul li a:before {
+  color: #2F343B;
+  font-size: 24px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+
+.bt-menu ul:first-of-type li a:hover,
+.bt-menu ul:first-of-type li a:focus,
+.bt-menu ul li a:hover:before,
+.bt-menu ul li a:focus:before {
+  color: #222222; }
+
+@font-face {
+  font-family: "minicons-webalys";
+  src: url("../fonts/demoicons/minicons-webalys.eot");
+  src: url("../fonts/demoicons/minicons-webalys.eot?#iefix") format("embedded-opentype"), url("../fonts/demoicons/minicons-webalys.ttf") format("truetype"), url("../fonts/demoicons/minicons-webalys.svg#minicons-webalys") format("svg"), url("../fonts/demoicons/minicons-webalys.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/demoicons/FontAwesome.eot");
+  src: url("../fonts/demoicons/FontAwesome.eot?#iefix") format("embedded-opentype"), url("../fonts/demoicons/FontAwesome.woff") format("woff"), url("../fonts/demoicons/FontAwesome.ttf") format("truetype"), url("../fonts/demoicons/FontAwesome.svg#FontAwesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.bt-icon:before,
+.bt-icon-alt:before {
+  font-family: "minicons-webalys";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased; }
+
+.bt-icon-alt:before {
+  font-family: "FontAwesome"; }
+
+.icon-window-delete:before {
+  content: "\e000"; }
+
+.icon-download:before {
+  content: "\e002"; }
+
+.icon-home:before {
+  content: "\e003"; }
+
+.icon-calendar:before {
+  content: "\e004"; }
+
+.icon-folder-add:before {
+  content: "\e001"; }
+
+.icon-windows:before {
+  content: "\e008"; }
+
+.icon-volume:before {
+  content: "\e00e"; }
+
+.icon-speaker:before {
+  content: "\e011"; }
+
+.icon-star:before {
+  content: "\e012"; }
+
+.icon-sun:before {
+  content: "\e014"; }
+
+.icon-trash:before {
+  content: "\e018"; }
+
+.icon-zoom:before {
+  content: "\e005"; }
+
+.icon-user-outline:before {
+  content: "\e006"; }
+
+.icon-picture:before {
+  content: "\e007"; }
+
+.icon-phone:before {
+  content: "\e009"; }
+
+.icon-newspaper:before {
+  content: "\e00a"; }
+
+.icon-printer:before {
+  content: "\e00b"; }
+
+.icon-microwave:before {
+  content: "\e00c"; }
+
+.icon-refresh:before {
+  content: "\e00d"; }
+
+.icon-lock:before {
+  content: "\e00f"; }
+
+.icon-email:before {
+  content: "\e010"; }
+
+.icon-browser:before {
+  content: "\e013"; }
+
+.icon-bubble:before {
+  content: "\e015"; }
+
+.icon-calculator:before {
+  content: "\e016"; }
+
+.icon-cd:before {
+  content: "\e017"; }
+
+.icon-enter:before {
+  content: "\e019"; }
+
+.icon-file-add:before {
+  content: "\e01a"; }
+
+.icon-flag:before {
+  content: "\e01b"; }
+
+.icon-twitter:before {
+  content: "\e01c"; }
+
+.icon-gplus:before {
+  content: "\e020"; }
+
+.icon-github:before {
+  content: "\e021"; }
+
+.icon-facebook:before {
+  content: "\e01d"; }
+
+.icon-instagram:before {
+  content: "\f063"; }
+
+.icon-:before {
+  content: ""; }
+
+/* Font Awesome */
+.icon-step-backward:before {
+  content: "\f048"; }
+
+.icon-backward:before {
+  content: "\f04a"; }
+
+.icon-pause:before {
+  content: "\f04c"; }
+
+.icon-stop:before {
+  content: "\f04d"; }
+
+.icon-forward:before {
+  content: "\f04e"; }
+
+.icon-step-forward:before {
+  content: "\f051"; }
+
+.icon-play:before {
+  content: "\f04b"; }
+
+/**
+ * FOOTER STYLES
+ *
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.footer {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background: #703030;
+  padding: 3em 1.618em;
+  width: 100%; }
+  .footer:last-child {
+    margin-right: 0; }
+  .footer h2 {
+    font-weight: 300;
+    text-align: center;
+    color: white; }
+  .footer .footer-links {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em; }
+  .footer ul {
+    -webkit-flex-basis: 13em;
+    -moz-flex-basis: 13em;
+    flex-basis: 13em;
+    -ms-flex-preferred-size: 13em;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    flex-shrink: 0;
+    -ms-flex-negative: 0;
+    margin-bottom: 3em;
+    padding: 0; }
+  .footer li {
+    line-height: 1.5em;
+    list-style: none;
+    text-align: center; }
+  .footer a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none; }
+    .footer a:focus, .footer a:hover {
+      color: white; }
+  .footer li h3 {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 0.4em; }
+  .footer hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto 1.5em;
+    width: 12em; }
+  .footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center; }
+
+/**
+ * RESPONSIVE STYLES
+ *
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #page-wrapper {
+    background-color: #e3d9c8; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #inner {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 100%; }
+    #inner:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #title {
+    height: 60px;
+    background-image: url("/images/title_mobile.svg");
+    background-position: center top;
+    background-repeat: no-repeat; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 1em; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  h2 {
+    font-size: 1em; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  p {
+    font-size: 0.8em; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #intro-wrapper {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 100%;
+    height: 100vh;
+    padding-top: 35%;
+    padding-bottom: 11%; }
+    #intro-wrapper:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #intro {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 82.9403914003%;
+    margin-left: 8.5298042998%;
+    text-align: center; }
+    #intro:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .hint {
+    display: none; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .message {
+    background-color: #e3d9c8;
+    background-image: url("/images/circles.png");
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: initial; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-1-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-01.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-1 {
+    background-image: url("/images/mobile-masks-01.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-2-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-02.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-2 {
+    background-image: url("/images/mobile-masks-02.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-3-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-03.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-3 {
+    background-image: url("/images/mobile-masks-03.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-4-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-04.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-4 {
+    background-image: url("/images/mobile-masks-04.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-5-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-05.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-5 {
+    background-image: url("/images/mobile-masks-05.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-6-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-06.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-6 {
+    background-image: url("/images/mobile-masks-06.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #message-7-wrapper {
+    background-color: #e3d9c8;
+    background-image: url("/images/mobile-messages-07.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 300px; } }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #mask-7 {
+    background-image: url("/images/mobile-masks-07.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px; } }

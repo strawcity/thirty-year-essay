@@ -1,0 +1,1 @@
+function modify_qty(e){var t=document.getElementById("qty").value,n=parseInt(t,10)+e;return t>=3&&console.log("balls"),document.getElementById("qty").value=n,n}
